@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 25 fév. 2024 à 17:18
+-- Généré le : dim. 25 fév. 2024 à 22:23
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.0.30
 
@@ -62,6 +62,32 @@ INSERT INTO `categories` (`id_Categorie`, `nom_Categorie`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `client`
+--
+
+CREATE TABLE `client` (
+  `id_client` int(11) NOT NULL,
+  `nom_client` varchar(50) NOT NULL,
+  `email_client` varchar(50) NOT NULL,
+  `mod_pass_client` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`id_client`, `nom_client`, `email_client`, `mod_pass_client`) VALUES
+(1, 'adnanne', 'aryf@gmail.com', '$2y$10$BrXDdy8HA/PKJ17GPjRkKeuOaM4.POPXlrMNpKmypjA'),
+(2, 'adnanee', 'aaaa@gmail.com', '$2y$10$BaqyxdFd8KxBILqrHjgb5uwHxiO.2SFglAUiiPZlVG7'),
+(3, 'ahmed', 'rrrr@gmail.com', '$2y$10$Y7NHaLciOYZQF8zq0ZG.s.P4jN.OrxFn3kEvMFZQon5'),
+(4, 'armani', 'armani@gmail.com', 'didi2023'),
+(5, 'redaa', 'reda@gmail.com', 'reda1234'),
+(6, 'saadmoltoon', 'saad@gmail.com', 'saad1234'),
+(7, 'firstclient', 'first@gmail.com', 'first1234');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `produits`
 --
 
@@ -101,6 +127,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id_Categorie`);
 
 --
+-- Index pour la table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`id_client`);
+
+--
 -- Index pour la table `produits`
 --
 ALTER TABLE `produits`
@@ -122,6 +154,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `categories`
   MODIFY `id_Categorie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `client`
+--
+ALTER TABLE `client`
+  MODIFY `id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `produits`
