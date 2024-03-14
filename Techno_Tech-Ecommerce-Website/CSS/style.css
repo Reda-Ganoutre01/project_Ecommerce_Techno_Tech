@@ -1,0 +1,384 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* !----header */
+:root {
+  /* --primary-color: #088178; */
+  --primary-color: #334add;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/********** Global Styles ************/
+
+h1 {
+  font-size: 3.125rem;
+  line-height: 4rem;
+  color: #222;
+}
+
+h2 {
+  font-size: 2.875rem;
+  line-height: 3.375rem;
+  color: #222;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+
+.section-m1 {
+  margin: 40px 0;
+  
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* header section */
+
+#Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0,0, 0,0.06);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index:10;
+
+}
+.logo{
+  width:120px;
+  padding: 0 20px ;
+  margin-left: -30px;
+ 
+}
+.Search{
+  width: 250px;
+  height: 40px;
+  background:white;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 0 20px ;
+
+  }
+
+  .Search input{
+      width:180px;
+      background: transparent;
+      flex: 1;
+      border: 0;
+      outline: none;
+      padding: 24px 20px;
+      font-size: 14px;
+      color: #0a0b0b;
+  }
+  .Search button img{
+      width: 20px;
+  }
+  .Search button{
+      border: 0;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      background:#e8eaeb ;
+      cursor: pointer;
+      margin-right: -17px;
+  }
+
+#navbar{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+#navbar li {
+  list-style: none;
+  padding: 0 20px ;
+  position: relative;
+}
+#navbar li  a{
+  font-size: 1 rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+#navbar li  a:hover,
+#navbar li  a.active{
+  color: var(--primary-color);
+}
+#navbar li  a:hover::after,
+#navbar li  a.active::after{
+  content: " ";
+  width: 30%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.head-card{
+  font-size: 1.2rem;
+}
+#mobile{
+  display: none;
+}
+#close{
+  display: none;
+}
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+ul li ul.dropdown {
+  width: 100%;
+  background: #e3e6f3;
+  position: absolute;
+  z-index: 999;
+  display: none;
+  /* margin-top: 20px; */
+}
+/* .dropdown li {
+  margin-top: 10px;
+} */
+ul.dropdown li{
+  margin-top: 16px;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+/* !--------------------search prod*/
+.box-container{
+  margin-top:10px;
+}
+.title_box{
+  width:80%;
+  height:150px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #334add;
+  border-radius: 5px;
+}
+.title_box span{
+  padding: 40px;
+}
+.title_box h6 a{
+  text-decoration: none;
+  color: white;
+}
+#boxtittle{
+  color:white;
+}
+.empty{
+  margin-left: 100px;
+  margin-top:20px;
+  color:red;
+  font-size: 30px;
+}
+.box_products{
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.row_prod{
+  display: flex;
+  flex-direction: row;
+}
+.card_box{
+  width: 250px;
+  border-radius: 10px;
+  height: 340px;
+  background-color: white;
+}
+.card_box:hover{
+  transform: translateY(-5px);
+}
+.card_box .box-head img {
+  width: 130px;
+  padding: 10px;
+  margin-left: 50px;
+}
+.card_box .box-body #nom{
+  font-size: 20px;
+  margin-left: 20px;
+  color: #000000;
+}
+.card_box .box-body #type{
+  margin-left: 20xp;
+  color: #000000;
+  opacity: 0.7;
+  margin-left: 20px;
+}
+.box-body p{
+  color: green;
+  margin-left: 20px;
+  font-size: 19px;
+
+}
+#box_prix{
+  font-size:20px;
+  margin-left: 28px;
+
+
+}
+/* !----Main */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !----fooetr */
+
+footer {
+  
+  /* display: flex;
+  flex-wrap: wrap; */
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0; /* Adjust as per your design */
+  padding: 20px; /* Adjust as per your design */
+  text-align: center;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual effect */
+   bottom: 0;
+   z-index:-10;
+
+}
+
+/* !-------- */
+footer .col {
+  justify-content: start;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
+footer .logo {
+  width:145px;
+  cursor: pointer;
+margin-bottom: 30px;
+margin-left: 20px;
+}
+footer h4{
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+footer p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+footer a{
+
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  display: block;
+  margin-bottom: 5px;
+}
+footer .follow {
+  margin-top: 10px;
+}
+
+footer .follow i {
+  margin-right: 4px;
+  font-size: 20px;
+  color: #666; /* Adjust as per your design */
+}
+
+footer .follow i:hover{
+  color: var(--primary-color);
+}
+
+footer .install .row img {
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  cursor: pointer;
+ }
+ footer .install img {
+   margin: 10px 0 15px;
+ }
+.section-p1 .copyright {
+  width:100%;
+  text-align: center;}
+
+/* .section-img{
+  display: flex;
+  flex-direction: row;
+} */
+.section-img img {
+  height: 100px;
+}
+
+.container_main #container_title{
+  color: red;
+}
