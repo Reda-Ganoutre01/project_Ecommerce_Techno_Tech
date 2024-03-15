@@ -16,19 +16,19 @@
 
   <body>  
     <?php
-include("header.php");
+// include("header.php");
     ?>
   <?php
-include('section.php');
+// include('section.php');
 
 
 ?> 
 <?php
-include('main.php');
+include('main2.php');
 ?>  
 
     <?php
-include("footer.php");
+// include("footer.php");
     ?>   
   </body>
 </html>

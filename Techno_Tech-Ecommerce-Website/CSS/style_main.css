@@ -19,7 +19,7 @@
     line-height: 40px;
     color:var(--black);
     margin-left: 90px;
-    margin-top: 50px;
+    margin-top: 8px;
 
 
 }
@@ -32,7 +32,6 @@
     position: absolute;
     margin-top: 10px;
     margin-left: -146px;
-
     bottom:0;
     transform: translateX(-50%);
 }
@@ -43,7 +42,6 @@
     width: 100%;
     align-items: center;
     flex-wrap: wrap;
-    /* margin-top: 10px; */
     justify-content: space-around;
 }
 .small-container{
@@ -107,7 +105,7 @@
         display: block;
         background-color: var(--primary-color);
         text-decoration: none;
-        width: 170px;
+        width: 100px;
         margin-top: -10px;
         margin-left: 5px;
         border-radius: .5rem;
@@ -124,3 +122,11 @@
      }
      
   
+     /* !2 */
+
+     .offers .products-sliderr  .box{
+        text-align: center;
+        padding: 2rem;
+        margin-bottom: 3rem;
+
+     }
