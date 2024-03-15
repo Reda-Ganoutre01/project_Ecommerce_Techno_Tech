@@ -48,7 +48,7 @@ $s=mysqli_query($pdo,"select * from categories");
 
             <li class="lg_bag"><a href="#" class="links_add">
                 <i class="fa-solid fa-bag-shopping head-card"></i></a></li>
-            <li class="lg_bag"><a href="auth.php" class="links_add"><i class="fa fa-solid fa-user head-card"></i></a></li>
+            <li class="lg_bag"><a href="login.php" class="links_add"><i class="fa fa-solid fa-user head-card"></i></a></li>
             <a href="#" id="close"><i class="fa fa-solid fa-xmark head-card"></i></a>
         </ul>
     </nav>
