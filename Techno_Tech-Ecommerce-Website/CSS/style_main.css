@@ -12,18 +12,19 @@
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
   }
 
-.title{
+#product1 .title{
     margin: 0 auto 80px;
+    align-items: start;
     font-size: 30px;
     position: relative;
     line-height: 40px;
     color:var(--black);
-    margin-left: 90px;
+    /* margin-left: 90px; */
     margin-top: 8px;
 
 
 }
-.title::after{
+#product1 .title::after{
     content: '';
     background: #ff523b;
     width: 280px;

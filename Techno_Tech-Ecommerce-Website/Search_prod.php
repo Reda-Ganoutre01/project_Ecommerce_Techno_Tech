@@ -1,18 +1,17 @@
-<?php
-include('header.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="CSS/style_main.css">
+   <link rel="stylesheet" href="CSS/style.css">
     <title>Document</title>
 </head>
 <body>
 
-
-   <div class="box-container">
+<?php
+include('header.php');
+?>
 
    <?php
 if (isset($_POST['search_btn'])) {
@@ -20,7 +19,7 @@ if (isset($_POST['search_btn'])) {
 
     echo '<div class="title_box">
             <span>
-              <h6><a href="index.php">Accueil</a></h6>
+              <h6><a href="index.php">Accueil/</a></h6>
               <h2 id="boxtittle">Tous Les Résultats de la recherche pour:' . $search_box . '</h2>
             </span>
           </div>';
@@ -32,49 +31,54 @@ if (isset($_POST['search_btn'])) {
 
     ?>
 
-<div class="small-container">
-             <div class="row">
-              <?php
+    
+<section id="product1" class="section-p1">
+    
+<div class="pro-container">
 
-if ($select_products->rowCount() > 0) {
-  foreach ($data as $val){
+    <?php
+       
+        
+       if ($select_products->rowCount() > 0) {
+        foreach ($data as $val){
          
 
-    echo '<div class="col-4">
+            echo '<div class="pro">';
+            echo    '<img  src='.$val['img'].'>';
+            echo '        <div class="des">';
+            echo '<span>'.$val['Nom_categorie'].'</span>';
+            echo '<h5>'.$val['nom'].'</h5>';
+            echo '<div class="star">';
+            for ($i=0;$i<$val['nbr_star'];$i++){
+                echo '<i class="fa fa-star rating-color"></i>';
+            }
+            echo '<i class="fa fa-star"></i>';
+            echo '</div>';
+        
+            echo '<h4>' . $val['prix'] . ',00 MAD' . '</h4>';
+            echo ' </div>';
 
-            ';
-    echo    '<img  src='.$val['img'].'>';
-    echo '<h4>'.$val['nom'].'</h4>';
-    echo '<h3>'.$val['Nom_categorie'].'</h3>';
-    echo '<div class="ratings">';
-    for ($i=0;$i<$val['nbr_star'];$i++){
-        echo '<i class="fa fa-star rating-color"></i>';
+            echo '
+                    <a class="cart" href="Detail_Produit.php?id1=' . $val["id"] . '">Voir details</a>';
+            echo '</div>';
+        }
+      
+    } else {
+        echo '<p class="empty">no products found!</p>';
     }
-    echo '<i class="fa fa-star"></i>';
-    echo '</div>';
-
-    echo '<p >' . $val['prix'] . ',00 MAD' . '</p>';
-
-    echo '
-            <a class="btn_row" href="Detail_Produit.php?id1=' . $val["id"] . '">Voir details</a>';
-    echo '</div>';
-}
-} else {
+    } else {
     echo '<p class="empty">no products found!</p>';
-}
-} else {
-echo '<p class="empty">no products found!</p>';
-}
-?>
-
+    }
+        ?>
+ 
+    
 </div>
-        </div>
-
-</div>
+</section>
 
 
-</body>
-</html>
+
 <?php
 include("footer.php");
     ?>   
+</body>
+</html>
